@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    color: #FF535B;
+    width: 100dvw;
+    overflow-x: hidden;
+    height: 100%;
+    background: #151515;
+    user-select: none;
+  }
+
+  @layer utilities{
+    .imageset{
+        @apply max-w-52 absolute top-0 left-0 opacity-0
+    }
+  }

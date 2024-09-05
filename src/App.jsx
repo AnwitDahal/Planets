@@ -1,7 +1,12 @@
 import React from "react";
+import MainLanding from "./Pages/MainLanding";
 
 const App = () => {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+  <main>
+    <MainLanding/>
+  </main>
+  )
 };
 
 export default App;
