@@ -17,14 +17,16 @@ const MainLanding = () => {
   const [zIndexVal, setZIndexVal] = useState(1);
   const threshold = 100;
 
-  // Get mouse position
   useEffect(() => {
     const getMousePos = (ev) => {
       setMousePos({ x: ev.clientX, y: ev.clientY });
     };
 
     window.addEventListener('mousemove', getMousePos);
-    return () => window.removeEventListener('mousemove', getMousePos);
+
+    return () => {
+      window.removeEventListener('mousemove', getMousePos);
+    };
   }, []);
 
   const getMouseDistance = () => {
@@ -37,29 +39,28 @@ const MainLanding = () => {
 
     gsap.timeline()
       .set(img, {
-        opacity: 0,
-        scale: 0.8,
+        startAt: { opacity: 0, scale: 1 },
+        opacity: 1,
+        scale: 1,
         zIndex: zIndexVal,
         x: cacheMousePos.x - rect.width / 2,
         y: cacheMousePos.y - rect.height / 2,
       })
       .to(img, {
-        duration: 0.9,
+        duration: gsap.utils.clamp(0.6, 1.2, MathUtils.distance(lastMousePos.x, lastMousePos.y, mousePos.x, mousePos.y) / 100),
         ease: Expo.easeOut,
-        opacity: 1,
-        scale: 1,
         x: mousePos.x - rect.width / 2,
         y: mousePos.y - rect.height / 2,
       })
       .to(img, {
-        duration: 1.2,
+        duration: 0.8,
         ease: Power1.easeOut,
         opacity: 0,
       }, 0.4)
       .to(img, {
-        duration: 1.2,
+        duration: 0.8,
         ease: Quint.easeOut,
-        scale: 0.5,
+        scale: 0.2,
       }, 0.4);
   };
 
@@ -96,7 +97,7 @@ const MainLanding = () => {
             ref={(el) => imagesRef.current[idx] = el}
             src={`/images/${src}`}
             alt={`image${idx + 1}`}
-            className="content_img imageset absolute w-full h-full object-cover"
+            className='content_img imageset'
           />
         ))}
         <h3 className="content_title">ranlus</h3>
