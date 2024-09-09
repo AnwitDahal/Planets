@@ -1,9 +1,10 @@
 import React from 'react'
 import { Canvas } from "@react-three/fiber";
 
-import Test from './Components/Test'
+import Test from './Components/Earth'
 import { OrbitControls, Stars } from '@react-three/drei';
 import './style.css'
+import Mars from './Components/Mars';
 
 const App = () => {
   return (
@@ -18,8 +19,8 @@ const App = () => {
         fade={true}        // Enable fading of stars at the edges
       />
       <ambientLight/>
-    <Test/>
-    {/* <Test2/> */}
+    {/* <Test/> */}
+    <Mars/>
     </Canvas>
     
   )
