@@ -3,7 +3,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Sphere, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 
-const Test = () => {
+const Mars = () => {
   let tex = useTexture("./Images/8k_mars.jpg");
   let planet = useRef();
   let cloudRef = useRef();
@@ -22,4 +22,4 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default Mars;
