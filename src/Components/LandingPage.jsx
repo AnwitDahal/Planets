@@ -62,49 +62,49 @@ const LandingPage = () => {
           </div>
 
           {/* Slide 4: Mars */}
-          <div className="h-screen w-screen relative ">
+          {/* <div className="h-screen w-screen relative ">
             <Canvas className="absolute inset-0">
               <OrbitControls />
               <ambientLight intensity={0.5} />
               <Mars />
             </Canvas>
-          </div>
+          </div> */}
 
           {/* Slide 5: Jupiter */}
-          <div className="h-screen w-screen relative ">
+          {/* <div className="h-screen w-screen relative ">
             <Canvas className="absolute inset-0">
               <OrbitControls />
               <ambientLight intensity={0.5} />
               <Jupiter />
             </Canvas>
-          </div>
+          </div> */}
 
           {/* Slide 6: Saturn */}
-          <div className="h-screen w-screen relative">
+          {/* <div className="h-screen w-screen relative">
             <Canvas className="absolute inset-0">
               <OrbitControls />
               <ambientLight intensity={0.5} />
               <Saturn />
             </Canvas>
-          </div>
+          </div> */}
 
           {/* Slide 7: Uranus */}
-          <div className="h-screen w-screen relative ">
+          {/* <div className="h-screen w-screen relative ">
             <Canvas className="absolute inset-0">
               <OrbitControls />
               <ambientLight intensity={0.5} />
               <Uranus />
             </Canvas>
-          </div>
+          </div> */}
 
           {/* Slide 8: Neptune */}
-          <div className="h-screen w-screen relative ">
+          {/* <div className="h-screen w-screen relative ">
             <Canvas className="absolute inset-0">
               <OrbitControls />
               <ambientLight intensity={0.5} />
               <Neptune />
             </Canvas>
-          </div>
+          </div> */}
         </Slider>
       </div>
 
@@ -128,7 +128,7 @@ const LandingPage = () => {
         >
           Earth
         </button>
-        <button
+        {/* <button
           className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
           onClick={() => goToSlide(3)}
         >
@@ -157,7 +157,7 @@ const LandingPage = () => {
           onClick={() => goToSlide(7)}
         >
           Neptune
-        </button>
+        </button> */}
       </footer>
     </div>
   );
