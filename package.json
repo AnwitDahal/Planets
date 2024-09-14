@@ -13,6 +13,7 @@
     "@react-three/drei": "^9.0.1",
     "@react-three/fiber": "^8.17.6",
     "@types/three": "^0.167.2",
+    "express": "^4.21.0",
     "gsap": "^3.12.5",
     "mongoose": "^8.6.2",
     "react": "^18.3.1",
