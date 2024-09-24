@@ -4,11 +4,20 @@ import dbConnect from "../config/db";
 
 const router = express.Router();
 
+router.use(async (req, res, next) => {
+  try {
+    await dbConnect();
+    next();
+  } catch (error) {
+    res.status(500).json
+  }
+})
+
 // Create a new user
 router.post("/createUser", async (req: Request, res: Response) => {
   try {
     console.log("TEST")
-    dbConnect();
+    await dbConnect();
     const user = new User(req.body);
     await user.save();
     res.status(201).json({ message: "User created successfully", user: user });
